@@ -1,5 +1,7 @@
 import { Header } from "../../components/Header";
 import { Sammury } from "../../components/Sammury";
+import { SearchForm } from "./components/SearchForm";
+
 import * as S from "./styles";
 
 export function Transaction() {
@@ -9,6 +11,8 @@ export function Transaction() {
       <Sammury />
 
       <S.TransactionContainer>
+        <SearchForm />
+
         <S.TransactionTable>
           <tbody>
             <tr>
