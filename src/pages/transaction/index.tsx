@@ -6,6 +6,7 @@ import { Sammury } from "../../components/Sammury";
 import { SearchForm } from "./components/SearchForm";
 
 import * as S from "./styles";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 
 export function Transaction() {
   const { transactions } = useContext(TransactionsContext);
@@ -26,11 +27,14 @@ export function Transaction() {
                   <td width="50%">{transaction.description}</td>
                   <td>
                     <S.PriceHighLight variant={transaction.type}>
-                      R$ {transaction.price}
+                      {transaction.type === "outcome" && "- "}
+                      {priceFormatter.format(transaction.price)}
                     </S.PriceHighLight>
                   </td>
                   <td>{transaction.category}</td>
-                  <td>{transaction.createdAt}</td>
+                  <td>
+                    {dateFormatter.format(new Date(transaction.createdAt))}
+                  </td>
                 </tr>
               );
             })}
