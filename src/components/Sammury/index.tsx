@@ -1,31 +1,12 @@
 import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
-import { useContext } from "react";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
+import { useSammury } from "../../hooks/useSammury";
+
 import { priceFormatter } from "../../utils/formatter";
 
 import * as S from "./styles";
 
 export function Sammury() {
-  const { transactions } = useContext(TransactionsContext);
-
-  const sammury = transactions.reduce(
-    (acc, transaction) => {
-      if (transaction.type === "income") {
-        acc.income += transaction.price;
-        acc.total += transaction.price;
-      } else {
-        acc.outcome += transaction.price;
-        acc.total -= transaction.price;
-      }
-
-      return acc;
-    },
-    {
-      income: 0,
-      outcome: 0,
-      total: 0,
-    }
-  );
+  const sammury = useSammury();
 
   return (
     <S.SammuryContainer>
