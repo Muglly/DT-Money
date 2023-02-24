@@ -23,6 +23,22 @@
       "category": "Casa",
       "price": 1200,
       "createdAt": "2023-02-05T12:00:13.427Z"
+    },
+    {
+      "description": "Edição de video",
+      "category": "Venda",
+      "price": 1000,
+      "type": "income",
+      "createdAt": "2023-02-24T13:01:41.336Z",
+      "id": 4
+    },
+    {
+      "description": "caldo de cana",
+      "category": "alimentação",
+      "price": 5,
+      "type": "outcome",
+      "createdAt": "2023-02-24T16:03:17.840Z",
+      "id": 5
     }
   ]
 }
