@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const SammuryContainer = styled.section`
   width: 100%;
@@ -11,10 +11,10 @@ export const SammuryContainer = styled.section`
   gap: 2rem;
 
   margin-top: -5rem;
-`;
+`
 
 interface SummuryCardProps {
-  variant?: "green";
+  variant?: 'green'
 }
 
 export const SummuryCard = styled.div<SummuryCardProps>`
@@ -36,8 +36,8 @@ export const SummuryCard = styled.div<SummuryCardProps>`
   }
 
   ${(props) =>
-    props.variant === "green" &&
+    props.variant === 'green' &&
     css`
       background: ${props.theme.colors.green[500]};
     `};
-`;
+`

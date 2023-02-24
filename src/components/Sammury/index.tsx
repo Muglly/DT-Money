@@ -1,12 +1,12 @@
-import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from "phosphor-react";
-import { useSammury } from "../../hooks/useSammury";
+import { ArrowCircleDown, ArrowCircleUp, CurrencyDollar } from 'phosphor-react'
+import { useSammury } from '../../hooks/useSammury'
 
-import { priceFormatter } from "../../utils/formatter";
+import { priceFormatter } from '../../utils/formatter'
 
-import * as S from "./styles";
+import * as S from './styles'
 
 export function Sammury() {
-  const sammury = useSammury();
+  const sammury = useSammury()
 
   return (
     <S.SammuryContainer>
@@ -37,5 +37,5 @@ export function Sammury() {
         <strong>{priceFormatter.format(sammury.total)}</strong>
       </S.SummuryCard>
     </S.SammuryContainer>
-  );
+  )
 }
